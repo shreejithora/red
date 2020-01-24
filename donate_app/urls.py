@@ -21,5 +21,6 @@ urlpatterns = [
     path('', home, name='home'),
     # path('donateview/', donateview, name='donateview'),
     path('donateform/', donateform, name='donateform'),
+    path('add/', adddonation, name='adddonation'),
     
 ]

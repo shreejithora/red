@@ -22,8 +22,8 @@
 {% endblock %}
  
 {% block media_content %}
-  {% csrf_token %}
-  <form action=" " method="POST">
+  <form action="{% url 'donate_app:adddonation' %}" method="POST">
+    {% csrf_token %}
     <table>
       <div class="container">
         <h1>Donation Form</h1>
@@ -31,7 +31,7 @@
         <tr>
           <td>
             <label for="name"> <b>Name:</b></label>
-            <input type="text" placeholder="Enter your name" name="Name" required>
+            <input type="text" placeholder="Enter your name" name="name" required>
           </td>
         </tr>
 
