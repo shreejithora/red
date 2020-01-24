@@ -1,0 +1,68 @@
+.main{
+ max-width: 1200px;
+ margin:auto;
+}
+.navtop{
+	height: 10vh;
+	width: 100%;
+	background-color:white;
+
+}
+ul{
+	float: right;
+	list-style: none;
+}
+ul li{
+	display: inline-block;
+	
+}
+ul li a {
+	color: #26004d;
+	margin: 10px;
+	padding: 10px;
+	text-decoration: none;
+	transition: 0.6s ease;
+}
+ul li a:hover{
+	background-color: #ffe6ff;
+	color: black;
+}
+/*ul li.active a{
+	background-color: black;
+	color: white;
+}*/
+ .logo img{
+ 	padding: 7px;
+	float: left;
+	width:8vw;
+    height:auto;
+}
+.mid{
+	height: 80vh;
+	background-image:url(../../media/donateApp/help.jpg);
+	background-position: center;
+	background-size:cover;
+}
+.navdown{
+	height: 10px;
+	width: 100%;
+	color: white;
+}
+ul{
+	float: left;
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+}
+ul li a:hover{
+	background-color: #ffe6ff;
+	color: black;
+}
+.middle{
+height: 80vh;
+width:100%;	
+}
