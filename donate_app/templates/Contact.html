@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+	<title>What we do</title>
+</head>
+<body>
+
+
+<!--NAVIGATION BAR TOP-->
+<div class="navtop">
+	<div class="logo">
+	<img src="../../media/donateApp/logo.png">
+	</div>
+	<ul>
+		<li ><a href="index.html">Home</a></li>	
+		<li ><a href="what.html">How it works</a></li>	
+		<li><a href="donate_app/templates/donation_form.html">Donate</a></li>
+		<li><a href="shop.html">Shop</a></li>
+        <li ><a href="blogs.html">Blogs</a></li>
+        <li class="active"><a href="contact.html">Contact Us</a></li>
+		<li><a href="faq.html">Updates</a></li>
+		<li ><a href="team.html">Our team</a></li>
+        </ul>
+</div>
+
+<div class="middle">
+{% extends 'base.html' %}
+
+{% block title %}
+    Pariwartan | Donate
+{% endblock %}
+
+{% block navbar %}
+<ul>
+    <li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+    <li ><a href="#">What we do</a></li>	
+    <li class="active"><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+    <li><a href=#">Shop</a></li>
+    <li ><a href="#">Blogs</a></li>
+    <li ><a href="#">Contact Us</a></li>
+    <li ><a href="#">FAQ</a></li>
+</ul>
+{% endblock %}
+
+{% block main_content %}
+<div class="mid">
+	<div class="background">
+		
+	</div>
+</div>
+<p>this is donate page</p>
+{% endblock %}
+
+
