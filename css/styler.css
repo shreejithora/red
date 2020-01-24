@@ -1,6 +1,5 @@
-.main{
-
- margin:auto;
+*{
+font-family: century gothic;
 }
 .navtop{
 	height: 10vh;
@@ -27,17 +26,19 @@ ul li a:hover{
 	background-color: #ffe6ff;
 	color: black;
 }
-/*ul li.active a{
+ul li.active a{
 	background-color: black;
 	color: white;
-}*/
+}
  .logo img{
  	padding: 7px;
 	float: left;
 	width:8vw;
-    height:auto;
+    height:50px;
 }
 .mid{
+    display:flex;
+  align-items: center;
 	height: 80vh;
 	background-image:/*linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),*/ url(../help.jpg);
 	background-position: center;
@@ -77,5 +78,6 @@ width:100%;
 button{
 	top:30;
 	left:20;
+	
 
 }
