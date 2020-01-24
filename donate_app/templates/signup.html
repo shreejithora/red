@@ -1,38 +1,36 @@
-<html>
-    <head>
-
-    </head>
-<body>
-    
-    <form action=" " method="  " enctype="multipart/form-data">
-       <h2 align="center">Create an account</h2></td>
-    <table align="center" width="750">
+{% extends 'base.html' %}
+    {% block media_content %}
+    {% csrf_token %}
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <h2 align="center">Create an account</h2></td>
+        <table align="center" width="750">
         
         <tr align="center">
-           
-           
         </tr>
         
         <tr>
             <td align="right">
                 <label for="name"><b>Name:</b></label>
             </td>
-            <td><input type="text" placeholder="Enter your name" name="  " required/></td>
+            <td><input type="text" placeholder="Enter your name" name="name" required/></td>
         </tr>
         
-        <tr>
-            <td align="right"> 
-                <label for="name"><b>Address:</b></label>
+         <tr>
+            <td>
+                <label for="gender"> <b>Gender:</b> </label><br>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other 
             </td>
-            <td><input type="text" placeholder="Enter your address" name="  " required/></td>
-        </tr>
+         </tr>
+
 
         <tr>
             <td align="right"> 
                 <label for="email"><b>Email:</b></label>
             </td>
 
-            <td><input type="text" placeholder="Enter your email" name="  " required/></td>
+            <td><input type="text" placeholder="Enter your email" name="" required/></td>
         </tr>
         
         <tr>
@@ -44,15 +42,16 @@
         </tr>
                   
         
-    <tr align="center">
-        <td ><input type="submit" name="  " value="Create Account" /></td>
-    </tr>
+        <tr align="center">
+            <td ><input type="submit" name="  " value="Create Account" /></td>
+        </tr>
     
     
     
     </table>
 
 </form>
+{% endblock %}
 
 </body>
 

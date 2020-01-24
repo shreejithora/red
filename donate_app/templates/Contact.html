@@ -26,18 +26,31 @@
 </div>
 
 <div class="middle">
+{% extends 'base.html' %}
 
+{% block title %}
+    Pariwartan | Donate
+{% endblock %}
 
+{% block navbar %}
+<ul>
+    <li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+    <li ><a href="#">What we do</a></li>	
+    <li class="active"><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+    <li><a href=#">Shop</a></li>
+    <li ><a href="#">Blogs</a></li>
+    <li ><a href="#">Contact Us</a></li>
+    <li ><a href="#">FAQ</a></li>
+</ul>
+{% endblock %}
+
+{% block main_content %}
+<div class="mid">
+	<div class="background">
+		
 	</div>
+</div>
+<p>this is donate page</p>
+{% endblock %}
 
-	<!--NAVIGATION BAR BOTTOM-->
-	<div class="navdown">
-		<div class="navdown">
-		<ul>	
-		<li><a href="#">Terms&Conditions</a></li>
-        <li><a href="#">Privacy</a></li>
-    </ul>
-	</div>
 
-</body>
-</html>

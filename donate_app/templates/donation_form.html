@@ -3,7 +3,8 @@
     <head>
         <title> Donation Form</title>
         <title>Home page</title>
-	     <link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+       <link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+       <!--<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}"-->
     </head>
 <body>
 
@@ -27,9 +28,16 @@
 
     <form action=" " method=" ">
        <table>
+{% extends 'base.html' %}
+{% load static%}
+          
+{% block title %} 
+  Donation Form
+{% endblock %}
 
-        <div class="container">
-          <h1>Donation Form</h1>
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/donation_form.css' %}">
+{% endblock %}
 
         <tr>
         <td>
@@ -37,31 +45,47 @@
           <input type="text" placeholder="Enter your name" name="Name" required> 
         </td>
         </tr>
+{% block navbar %}
+<ul>
+  <li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+  <li ><a href="#">What we do</a></li>	
+  <li class="active"><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+  <li><a href="#">Shop</a></li>
+  <li ><a href="#">Blogs</a></li>
+  <li ><a href="c#">Contact Us</a></li>
+  <li ><a href="f#">FAQ</a></li>
+</ul>
+{% endblock %}
+ 
+{% block media_content %}
+  {% csrf_token %}
+  <form action=" " method="POST">
+    <table>
+      <div class="container">
+        <h1>Donation Form</h1>
 
         <tr>
-            <td>
-              <label for="gender"><b>Gender:</b></label><br>
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female"> Female<br>
-                <input type="radio" name="gender" value="other"> Other 
-             </td>
-            </tr>
+          <td>
+            <label for="name"> <b>Name:</b></label>
+            <input type="text" placeholder="Enter your name" name="Name" required>
+          </td>
+        </tr>
 
-            
+                    
         <tr>
-        <td>
-          <label for="contact"><b>Contact:</b></label>
-          <input type="text" placeholder="Enter your contact number" name="contact" required>
-        </td>
+          <td>
+           <label for="contact"><b>Contact:</b></label>
+           <input type="text" placeholder="Enter your contact number" name="contact" required>
+          </td>
         </tr>
 
         
           
         <tr>
-        <td>
-          <label for="add"><b>Address:</b></label>
-          <input type="text" placeholder="Enter your address" name="address" required>
-        </td>
+          <td>
+            <label for="add"><b>Address:</b></label>
+            <input type="text" placeholder="Enter your address" name="address" required>
+          </td>
         </tr>
       
         <tr>
@@ -69,16 +93,16 @@
             <label for="date"><b>Date:</b></label>
             <input type="date"  name="date" required>
           </td>
-          </tr>
+        </tr>
 
 
         <tr>
           <td><button type="submit" class="registerbtn">Register</button></td>
         </tr>
 
-        </div>
+      </div>
         
-        </table>
+    </table>
       
         
       </form> 
@@ -92,7 +116,8 @@
         <li><a href="#">Privacy</a></li>
     </ul>
 </div>
+  </form> 
+{% endblock %}
 
 </body>
-
 </html>

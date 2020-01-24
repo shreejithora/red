@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from donate_app.views import home, donateview, donateform
-
+from .views import *
+app_name=  'donate_app'
 urlpatterns = [
-    path('donateview/', donateview, name='donateview'),
+    path('', home, name='home'),
+    # path('donateview/', donateview, name='donateview'),
     path('donateform/', donateform, name='donateform'),
+    
 ]

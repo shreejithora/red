@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>
+		{% block title %}
+			Pariwartan
+		{% endblock %}
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+    {% block css %}
+    
+    {% endblock %}
+</head>
+<body>
+<div class="main">
+
+<!--NAVIGATION BAR TOP-->
+<div class="navtop">
+	<div class="logo">
+	<img src="../../media/donateApp/logo.png">
+    </div>
+    {% block navbar %}
+	<ul>
+		<li class="active"><a href="{% url 'donate_app:home' %}">Home</a></li>	
+		<li ><a href="#">What we do</a></li>	
+		<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+		<li><a href="#">Shop</a></li>
+        <li ><a href="#">Blogs</a></li>
+        <li ><a href="#">Contact Us</a></li>
+        <li ><a href="#">FAQ</a></li>
+    </ul>
+    {% endblock %}
+</div>
+
+{% block media_content %}
+<div class="mid">
+<div class="background">
+	</div>
+	</div>
+{% endblock %}
+
+	<!--NAVIGATION BAR BOTTOM-->
+	<div class="navdown">
+		<div class="navdown">
+		<ul>	
+		<li><a href="#">Terms&Conditions</a></li>
+        <li><a href="#">Privacy</a></li>
+    </ul>
+	</div>
+</div>
+</body>
+</html>

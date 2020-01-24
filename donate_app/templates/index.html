@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html>
-<head>
-	<title>Home page</title>
+
+{% block title %}
+	Pariwartan | HomePage
+{% endblock %}
+
+	{% block css %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+<<<<<<< HEAD
 </head>
 <body>
 
@@ -46,16 +50,38 @@
 	</div>
 	</div>
 	</div>
+=======
+	{% endblock %}
 
-	<!--NAVIGATION BAR BOTTOM-->
-	<div class="navdown">
-		<div class="navdown">
-		<ul>	
-		<li><a href="#">Terms&Conditions</a></li>
-        <li><a href="#">Privacy</a></li>
+	{% block navbar %}
+	<ul>
+		<li class="active"><a href="{% url 'donate_app:home' %}">Home</a></li>	
+		<li ><a href="#">What we do</a></li>	
+		<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+		<li><a href="#">Shop</a></li>
+        <li ><a href="#">Blogs</a></li>
+        <li ><a href="#">Contact Us</a></li>
+        <li ><a href="#">FAQ</a></li>
     </ul>
+	{% endblock %}
+
+>>>>>>> 126829fb8dae7bbdc772b3b096c4dc2b884cac40
+
+{% block media_content %}
+<div class="mid">
+	<div class="background">
+		
 	</div>
 </div>
+<<<<<<< HEAD
 
 </body>
 </html>
+=======
+<p>this is homepage</p>
+
+{% endblock %}
+
+
+
+>>>>>>> 126829fb8dae7bbdc772b3b096c4dc2b884cac40
