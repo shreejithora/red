@@ -1,43 +1,12 @@
-<!DOCTYPE html>
-<html>
-	{% load static %}
-<head>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
-	<title>What we do</title>
-</head>
-<body>
-	<div class="main">
+{% extends 'base.html' %}
 
-<!--NAVIGATION BAR TOP-->
-<div class="navtop">
-	<div class="logo">
-	<img src="logo.png">
-	</div>
-	<ul>
-		<li ><a href="index.html">Home</a></li>	
-		<li ><a href="what.html">What we do</a></li>	
-		<li class="active"><a href="Donate.html">Donate</a></li>
-		<li><a href="shop.html">Shop</a></li>
-        <li ><a href="blogs.html">Blogs</a></li>
-        <li ><a href="contact.html">Contact Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        </ul>
-</div>
+{% block title %}
+    AskMate | Home
+{% endblock %}
 
-<div class="middle">
+{% block main_content %}
+    <a class="btn btn-primary" href="{% url 'qna:read' %}" role="button">View Questions</a>
+    <a class="btn btn-primary" href="{% url 'qna:add' %}" role="button">Add Questions</a>
+{% endblock %}
 
 
-	</div>
-
-	<!--NAVIGATION BAR BOTTOM-->
-	<div class="navdown">
-		<div class="navdown">
-		<ul>	
-		<li><a href="#">Terms&Conditions</a></li>
-        <li><a href="#">Privacy</a></li>
-    </ul>
-	</div>
-</div>
-
-</body>
-</html>
