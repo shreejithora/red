@@ -11,13 +11,13 @@
 
 {% block navbar %}
 <ul>
-  <li ><a href="index.html">Home</a></li>	
-  <li ><a href="what.html">What we do</a></li>	
-  <li class="active"><a href="{% url 'donate_app:donateview' %}">Donate</a></li>
-  <li><a href="shop.html">Shop</a></li>
-  <li ><a href="blogs.html">Blogs</a></li>
-  <li ><a href="contact.html">Contact Us</a></li>
-  <li ><a href="faq.html">FAQ</a></li>
+  <li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+  <li ><a href="#">What we do</a></li>	
+  <li class="active"><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+  <li><a href="#">Shop</a></li>
+  <li ><a href="#">Blogs</a></li>
+  <li ><a href="c#">Contact Us</a></li>
+  <li ><a href="f#">FAQ</a></li>
 </ul>
 {% endblock %}
  
@@ -35,20 +35,11 @@
           </td>
         </tr>
 
+                    
         <tr>
           <td>
-            <label for="gender"><b>Gender:</b></label><br>
-              <input type="radio" name="gender" value="male" checked> Male<br>
-              <input type="radio" name="gender" value="female"> Female<br>
-              <input type="radio" name="gender" value="other"> Other 
-          </td>
-        </tr>
-
-            
-        <tr>
-          <td>
-            <label for="contact"><b>Contact:</b></label>
-            <input type="text" placeholder="Enter your contact number" name="contact" required>
+           <label for="contact"><b>Contact:</b></label>
+           <input type="text" placeholder="Enter your contact number" name="contact" required>
           </td>
         </tr>
 
@@ -82,5 +73,4 @@
 {% endblock %}
 
 </body>
-
 </html>

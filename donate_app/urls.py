@@ -19,7 +19,7 @@ from .views import *
 app_name=  'donate_app'
 urlpatterns = [
     path('', home, name='home'),
-    path('donateview/', donateview, name='donateview'),
-    path('donateview/donateform/', donateform, name='donateform'),
+    # path('donateview/', donateview, name='donateview'),
+    path('donateform/', donateform, name='donateform'),
     
 ]
