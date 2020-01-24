@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static%}
+          
+{% block title %} 
+  Donation Form
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/donation_form.css' %}">
+{% endblock %}
+
+{% block navbar %}
+<ul>
+  <li ><a href="index.html">Home</a></li>	
+  <li ><a href="what.html">What we do</a></li>	
+  <li class="active"><a href="{% url 'donate_app:donateview' %}">Donate</a></li>
+  <li><a href="shop.html">Shop</a></li>
+  <li ><a href="blogs.html">Blogs</a></li>
+  <li ><a href="contact.html">Contact Us</a></li>
+  <li ><a href="faq.html">FAQ</a></li>
+</ul>
+{% endblock %}
+ 
+{% block media_content %}
+  {% csrf_token %}
+  <form action=" " method="POST">
+    <table>
+      <div class="container">
+        <h1>Donation Form</h1>
+
+        <tr>
+          <td>
+            <label for="name"> <b>Name:</b></label>
+            <input type="text" placeholder="Enter your name" name="Name" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="gender"><b>Gender:</b></label><br>
+              <input type="radio" name="gender" value="male" checked> Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other"> Other 
+          </td>
+        </tr>
+
+            
+        <tr>
+          <td>
+            <label for="contact"><b>Contact:</b></label>
+            <input type="text" placeholder="Enter your contact number" name="contact" required>
+          </td>
+        </tr>
+
+        
+          
+        <tr>
+          <td>
+            <label for="add"><b>Address:</b></label>
+            <input type="text" placeholder="Enter your address" name="address" required>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <label for="date"><b>Date:</b></label>
+            <input type="date"  name="date" required>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td><button type="submit" class="registerbtn">Register</button></td>
+        </tr>
+
+      </div>
+        
+    </table>
+      
+        
+  </form> 
+{% endblock %}
+
+</body>
+
+</html>

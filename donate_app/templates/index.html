@@ -1,14 +1,60 @@
- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
-	Pariwartan | Home
+	Pariwartan | HomePage
 {% endblock %}
 
+
+<!-- <!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Home page</title> -->
+	{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+	{% endblock %}
+<!-- </head>
+<body>
+<div class="main"> -->
+
+<!--NAVIGATION BAR TOP-->
+<!-- <div class="navtop">
+	<div class="logo">
+	<img src="../../media/donateApp/logo.png">
+	</div> -->
+	{% block navbar %}
+	<ul>
+		<li class="active"><a href="index.html">Home</a></li>	
+		<li ><a href="#">What we do</a></li>	
+		<li ><a href="{% url 'donate_app:donateview' %}">Donate</a></li>
+		<li><a href="shop.html">Shop</a></li>
+        <li ><a href="blogs.html">Blogs</a></li>
+        <li ><a href="contact.html">Contact Us</a></li>
+        <li ><a href="faq.html">FAQ</a></li>
+    </ul>
+	{% endblock %}
+<!-- </div> -->
 
 {% block media_content %}
-	<!-- <div class="mid">
-		<div class="background">
-		</div>
-	</div> -->
-	<p>this is home page</p>
+<div class="mid">
+	<div class="background">
+		
+	</div>
+</div>
+<p>this is homepage</p>
+
 {% endblock %}
+
+
+
+	<!--NAVIGATION BAR BOTTOM-->
+	<!-- <div class="navdown">
+		<div class="navdown">
+		<ul>	
+			<li><a href="#">Terms&Conditions</a></li>
+        	<li><a href="#">Privacy</a></li>
+    	</ul>
+		</div>
+	</div>
+</body>
+</html> -->
