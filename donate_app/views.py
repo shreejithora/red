@@ -35,3 +35,6 @@ def adddonation(request):
         datecategory = DateCategoryModel.objects.all()
         return render(request, 'questionmodel_create.html', {'datecategory':datecategory})
 
+def team(request):
+    return render(request, 'team.html')
+

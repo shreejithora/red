@@ -21,8 +21,9 @@
         <li ><a href="blogs.html">Blogs</a></li>
         <li class="active"><a href="contact.html">Contact Us</a></li>
 		<li><a href="faq.html">Updates</a></li>
-		<li ><a href="team.html">Our team</a></li>
-        </ul>
+		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
+		<a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
+    </ul>
 </div>
 
 <div class="middle">
