@@ -2,6 +2,7 @@
 {% load static %}
 
 	{% block css %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
 	{% endblock %}
 	{% block title %}
@@ -27,18 +28,32 @@
 
 {% block media_content %}
 <div class="middle">
-	<h1>1)Bijita Kc</h1>
-	<h2>Currently studying Bsc.Csit in Kathford College.Front end designer.</h2><br>
+	<div class="card">
+		<img src="img1.jpg" alt="image" style="width:100%">
+		<h1>Shreejit Hora</h1>
+		<p class="title">Backend Designer</p>
+		<p>Kathford International College</p>
+	   
+	</div>
+	  
+	<div class="card">
+		<img src="img3.jpg" alt="image" style="width:100%">
+		<h1>Sumnima Thapa</h1>
+		<p class="title">Content riter</p>
+		<p>St.Xaviers College</p>
+	</div>
+		<img src="img2.jpg" alt="image" style="width:100%">
+		<h1>Utsav Dhungana</h1>
+		<p class="title">Frontend Designer</p>
+		<p>Asian College</p>
+ 	</div>
 
-  	<h1>2)Utsav Dhungana</h1>
-  	<h2>Currently studying  Bsc.Csit in Asian College of higher studies.Front End Designer.</h2><br>
-
-	<h1>3)Shreejit Hora</h1>
-
-	<h2>Currently studying Bsc.Csit in Kathford College.Back End Developer.</h2><br>
-
-	<h1>4)Sumnima Thapa</h1>
-	<h2>Currently studying Bsc.Csit in St.Xavier’s College.Content Writer.</h2><br>
+	<div class="card">
+		<img src="img4.jpg" alt="image" style="width:100%">
+		<h1>Bijita Kc</h1>
+		<p class="title">Frontend Designer</p>
+		<p>Kathford International College</p>
+ 	</div>
 </div>
 {% endblock %}
 

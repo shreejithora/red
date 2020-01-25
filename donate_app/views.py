@@ -16,17 +16,19 @@ def home(requests):
 #     return render(requests, 'Donate.html')
 
 def donateform(requests):
-    return render(requests, 'donation_form.html')
+    form = DonateForm()
+    context = {'form' : form}
+    return render(requests, 'donation_form.html', context)
 
 def adddonation(request):
     if(request.method == 'POST'):
-        form = DonateForm(request.POST, request.FILES)
+        form = DonateForm(request.POST)
         if form.is_valid():
-            try:
-                form.save()
-                return redirect('donate_app:home')
-            except:
-                return HttpResponse('Failed')
+            form.save()
+            return redirect('donate_app:home')
+            # try:
+            # except:
+            #     return HttpResponse('Failed')
         else:
             print(form.errors)
             return HttpResponse('Form not Valid')

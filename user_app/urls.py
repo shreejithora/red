@@ -17,11 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from donate_app.views import home
+from user_app.views import signup, signupform, loginauth
+app_name = 'user_app'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    path('donate/', include('donate_app.urls')),
-    path('user/', include('user_app.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('signupform/', signupform, name='signupform'),
+    path('signup/', signup, name='signup'),
+    path('login/', loginauth, name='login'),
+    
+]

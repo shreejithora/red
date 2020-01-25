@@ -19,7 +19,7 @@ class DonateModel(models.Model):
     contact = models.CharField(max_length=120)
     address = models.CharField(max_length=255)
     datecategory = models.ForeignKey(DateCategoryModel,on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
         return(self.name)

@@ -2,11 +2,10 @@
     
 
 {% block media_content %}
-    
-    <form action="#" method="POST" enctype="multipart/form-data">
+<h2 align="center">Create an account</h2>
+    <form action="{% url 'user_app:signup' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <h2 align="center">Create an account</h2>
-        <table align="center" width="750">
+        <!-- <table align="center" width="750">
         
         <tr align="center">
         </tr>
@@ -51,7 +50,9 @@
     
     
     
-    </table>
+    </table> -->
+    {{form.as_table}}
+    <button type="submit">signup</button>
 
 </form>
 {% endblock %}

@@ -20,7 +20,8 @@
         <li ><a href="blogs.html">Blog</a></li>
 		<li ><a href="faq.html">Updates</a></li>
 		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-		<a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
+		<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+		<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
 	</ul>
 {% endblock %}
 

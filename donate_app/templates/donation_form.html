@@ -27,13 +27,15 @@
   <li ><a href="#">FAQ</a></li>
   <li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
   <a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
+  <li><button onclick="window.location.href = 'login.html';">Log in</button>
+	<li><button onclick="window.location.href = 'signup.html';">Sign up</button>
 </ul>
 {% endblock %}
  
 {% block media_content %}
   <form action="{% url 'donate_app:adddonation' %}" method="POST">
     {% csrf_token %}
-    <table>
+    <!-- <table>
       <div class="container">
         <h1>Donation Form</h1>
 
@@ -75,9 +77,10 @@
 
       </div>
         
-    </table>
+    </table> -->
       
-        
+        {{form.as_table}}
+        <button type="submit">submit</button>
       </form> 
     </div>
 

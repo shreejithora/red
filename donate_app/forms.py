@@ -1,7 +1,7 @@
 from django import forms 
 from .models import DateCategoryModel, DonateModel
 
-class DonateForm(forms.Form):
+class DonateForm(forms.ModelForm):
     class Meta:
         model = DonateModel
         fields = '__all__'
