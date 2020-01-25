@@ -40,3 +40,18 @@ def adddonation(request):
 def team(request):
     return render(request, 'team.html')
 
+def what(request):
+    return render(request, 'what.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def shop(request):
+    return render(request, 'shop.html')
+
+def blogs(request):
+    return render(request, 'blogs.html')
+
+def faq(request):
+    return render(request, 'FAQ.html')
+

@@ -19,16 +19,16 @@
 {% block navbar %}
 <ul>
   <li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
-  <li ><a href="#">What we do</a></li>	
+  <li ><a href="{% url 'donate_app:what' %}">What we do</a></li>	
   <li class="active"><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
-  <li><a href="#">Shop</a></li>
-  <li ><a href="#">Blogs</a></li>
-  <li ><a href="#">Contact Us</a></li>
-  <li ><a href="#">FAQ</a></li>
+  <li ><a href="{% url 'donate_app:shop' %}">Shop</a></li>
+  <li ><a href="{% url 'donate_app:blogs' %}">Blogs</a></li>
+  <li ><a href="{% url 'donate_app:contact' %}">Contact Us</a></li>
+  <li ><a href="{% url 'donate_app:faq' %}">FAQ</a></li>
   <li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-  <a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
-  <li><button onclick="window.location.href = 'login.html';">Log in</button>
-	<li><button onclick="window.location.href = 'signup.html';">Sign up</button>
+  <li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+  <li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
+
 </ul>
 {% endblock %}
  
@@ -79,20 +79,10 @@
         
     </table> -->
       
-        {{form.as_table}}
-        <button type="submit">submit</button>
-      </form> 
-    </div>
-
-    <!--NAVIGATION BAR BOTTOM-->
-	<div class="navdown">
-		<div class="navdown">
-		<ul>	
-		<li><a href="#">Terms&Conditions</a></li>
-        <li><a href="#">Privacy</a></li>
-    </ul>
-</div>
+      {{form.as_table}}
+      <button type="submit">submit</button>
   </form> 
+  
 {% endblock %}
 
 </body>

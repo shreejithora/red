@@ -66,3 +66,19 @@ ul li a:hover{
 height: 80vh;
 width:100%;	
 }
+
+.card {
+	padding: 20px;
+	margin: 20px;
+	float: left;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ max-width: 300px;
+ margin: auto;
+ text-align: center;
+ font-family: century gothic;
+}
+
+.title {
+ color: grey;
+ font-size: 18px;
+}

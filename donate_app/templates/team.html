@@ -3,7 +3,23 @@
 
 	{% block css %}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
+	<style>
+		.card {
+			padding: 5px;
+			margin: 20px;
+			float: left;
+		 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		 	max-width: 300px;
+		 	margin: auto;
+		 	text-align: center;
+		 	font-family: century gothic;
+	   	}
+	   
+	   	.title {
+			color: grey;
+		 	font-size: 18px;
+	   	}
+	</style>
 	{% endblock %}
 	{% block title %}
 	Donate | Team
@@ -15,41 +31,40 @@
 	{% block navbar %}
 	<ul>
 		<li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
-		<li ><a href="#">How it works</a></li>	
-		<li><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
-		<li><a href="#">Shop</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="faq.html">Updates</a></li>
-		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-		<a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
+		<li ><a href="{% url 'donate_app:what' %}">What we do</a></li>	
+		<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+		<li ><a href="{% url 'donate_app:shop' %}">Shop</a></li>
+		<li ><a href="{% url 'donate_app:blogs' %}">Blogs</a></li>
+		<li ><a href="{% url 'donate_app:contact' %}">Contact Us</a></li>
+		<li ><a href="{% url 'donate_app:faq' %}">FAQ</a></li>
+		<li class="active"><a href="{% url 'donate_app:team' %}">Our team</a></li>
+		<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+		<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
 	</ul>
 	{% endblock %}
 
 {% block media_content %}
 <div class="middle">
 	<div class="card">
-		<img src="img1.jpg" alt="image" style="width:100%">
+		<img src="../../media/donateApp/img1.jpg" alt="image" style="width:200px; height: 200px;">
 		<h1>Shreejit Hora</h1>
 		<p class="title">Backend Designer</p>
-		<p>Kathford International College</p>
-	   
-	</div>
-	  
+		<p>Kathford International College</p> 
+	</div> 
 	<div class="card">
-		<img src="img3.jpg" alt="image" style="width:100%">
+		<img src="../../media/donateApp/img3.jpg" alt="image" style="width:200px; height: 200px;">
 		<h1>Sumnima Thapa</h1>
 		<p class="title">Content riter</p>
 		<p>St.Xaviers College</p>
 	</div>
-		<img src="img2.jpg" alt="image" style="width:100%">
+		<img src="../../media/donateApp/img2.jpg" alt="image" style="width:200px; height: 200px;">
 		<h1>Utsav Dhungana</h1>
 		<p class="title">Frontend Designer</p>
 		<p>Asian College</p>
  	</div>
 
 	<div class="card">
-		<img src="img4.jpg" alt="image" style="width:100%">
+		<img src="../../media/donateApp/img4.jpg" alt="image" style="width:200px; height: 200px;">
 		<h1>Bijita Kc</h1>
 		<p class="title">Frontend Designer</p>
 		<p>Kathford International College</p>

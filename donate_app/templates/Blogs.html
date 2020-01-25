@@ -1,45 +1,27 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styler.css' %}">
-	<title>blogs</title>
-</head>
-<body>
 
-<!--NAVIGATION BAR TOP-->
-<div class="navtop">
-	<div class="logo">
-	<img src="../../media/donateApp/logo.png">
-	</div>
+{% block title %}
+Pariwartan | Blogs
+{% endblock %}
+
+{% block navbar %}
 	<ul>
-		<li ><a href="index.html">Home</a></li>	
-		<li ><a href="what.html">How it works</a></li>	
-		<li><a href="donate_app/templates/donation_form.html">Donate</a></li>
-		<li><a href="shop.html">Shop</a></li>
-        <li class="active"><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-		<li><a href="faq.html">Updates</a></li>
+		<li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+		<li ><a href="{% url 'donate_app:what' %}">What we do</a></li>	
+		<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+		<li><a href="{% url 'donate_app:shop' %}">Shop</a></li>
+        <li class="active"><a href="{% url 'donate_app:blogs' %}">Blogs</a></li>
+        <li ><a href="{% url 'donate_app:contact' %}">Contact Us</a></li>
+		<li ><a href="{% url 'donate_app:faq' %}">FAQ</a></li>
 		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-		<a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
-		<li><button onclick="window.location.href = 'login.html';">Log in</button>
-		<li><button onclick="window.location.href = 'signup.html';">Sign up</button>
-    </ul>
-</div>
+		<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+		<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
 
+    </ul>
+{% endblock %}
+
+{% block media_content %}
 <div class="middle">
-
-
-	</div>
-
-	<!--NAVIGATION BAR BOTTOM-->
-	<div class="navdown">
-		<div class="navdown">
-		<ul>	
-		<li><a href="#">Terms&Conditions</a></li>
-        <li><a href="#">Privacy</a></li>
-    </ul>
-	</div>
-
-</body>
-</html>
+</div>
+{% endblock %}

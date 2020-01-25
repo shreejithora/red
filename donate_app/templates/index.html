@@ -12,25 +12,26 @@
 
 
 {% block navbar %}
-	<ul>
-		<li class="active"><a href="{% url 'donate_app:home' %}">Home</a></li>	
-		<li ><a href="what.html">How it works</a></li>	
-		<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
-		<li><a href="shop.html">Shop</a></li>
-        <li ><a href="blogs.html">Blog</a></li>
-		<li ><a href="faq.html">Updates</a></li>
-		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-		<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
-		<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
-	</ul>
+<ul>
+	<li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+	<li ><a href="{% url 'donate_app:what' %}">What we do</a></li>	
+	<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+	<li ><a href="{% url 'donate_app:shop' %}">Shop</a></li>
+	<li ><a href="{% url 'donate_app:blogs' %}">Blogs</a></li>
+	<li ><a href="{% url 'donate_app:contact' %}">Contact Us</a></li>
+	<li class="active"><a href="{% url 'donate_app:faq' %}">FAQ</a></li>
+	<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
+	<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+	<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
+</ul>
 {% endblock %}
 
 {% block media_content %}
 <div class="mid">
 	<div class="background">
 		<div class="title">
-			<h1>“हजुरको सानो सहयोगले कसैको जिवनमा परिवर्तन ल्याउन सक्छ”</h1>
-			<h2>Do you have old clothes just taking up the space of your cupboard?
+			<h1 style="color: white;">“हजुरको सानो सहयोगले कसैको जिवनमा परिवर्तन ल्याउन सक्छ”</h1>
+			<h2 style="color: white;">Do you have old clothes just taking up the space of your cupboard?
 
 				There are more than 25.2% of Nepali People waiting for you to donate a drop from your ocean of clothes.
 					

@@ -23,5 +23,11 @@ urlpatterns = [
     path('donateform/', donateform, name='donateform'),
     path('add/', adddonation, name='adddonation'),
     path('team/', team, name='team'),
+    path('what/', what, name='what'),
+    path('contact/', contact, name='contact'),
+    path('shop/', shop, name='shop'),
+    path('blogs/', blogs, name='blogs'),
+    path('faq/', faq, name='faq'),
+
     
 ]

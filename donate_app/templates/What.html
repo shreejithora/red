@@ -9,17 +9,18 @@ Pariwartan | What To Do
 {% endblock%}
 
 {% block navbar %}
-	<ul>
-		<li ><a href="index.html">Home</a></li>	
-		<li class="active"><a href="what.html">How it works</a></li>	
-		<li ><a href="donate_app/templates/donation_form.html">Donate</a></li>
-		<li ><a href="shop.html">Shop</a></li>
-        <li ><a href="blogs.html">Blogs</a></li>
-        <li ><a href="contact.html">Contact Us</a></li>
-		<li><a href="faq.html">FAQ</a></li>
-		<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
-		<a href="{% url 'donate_app:donateform' %}"><button type="button">Donate</button></a>
-	</ul>
+<ul>
+	<li ><a href="{% url 'donate_app:home' %}">Home</a></li>	
+	<li class="active"><a href="{% url 'donate_app:what' %}">What we do</a></li>	
+	<li ><a href="{% url 'donate_app:donateform' %}">Donate</a></li>
+	<li ><a href="{% url 'donate_app:shop' %}">Shop</a></li>
+	<li ><a href="{% url 'donate_app:blogs' %}">Blogs</a></li>
+	<li ><a href="{% url 'donate_app:contact' %}">Contact Us</a></li>
+	<li ><a href="{% url 'donate_app:faq' %}">FAQ</a></li>
+	<li ><a href="{% url 'donate_app:team' %}">Our team</a></li>
+	<li><a href="{% url 'user_app:login' %}"><button>Log in</button></a>
+	<li><a href="{% url 'user_app:signupform' %}"><button>Sign up</button></a>
+</ul>
 {% endblock %}
 
 {% block media_content %}
